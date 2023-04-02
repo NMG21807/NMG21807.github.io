@@ -1,0 +1,906 @@
+ /* Import des polices Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@1,700&family=Lobster&family=Nunito:ital,wght@0,400;1,700&family=Open+Sans:ital,wght@0,600;1,400;1,600&family=Roboto+Slab&family=Roboto:ital,wght@0,400;0,500;1,300&display=swap');
+
+/* Définition des styles par défaut pour tous les éléments */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif; /* Utilisation de la police Poppins pour tous les éléments */
+}
+
+/* Définition des variables CSS personnalisées */
+:root {
+  --bg-color: #1f242d ; /* Couleur de fond principale */
+  --second-bg-color: #323946; /* Couleur de fond secondaire */
+  --text-color: #fff; /* Couleur de texte principale */
+  --min-color: #e7a90cd7; /* Couleur d'accentuation */
+}
+
+html {
+  font-size: 62.5; /* Définition de la taille de police de base à 62,5% pour faciliter la conversion de pixels en ems */
+  overflow-x: hidden; /* Empêche la barre de défilement horizontale */
+}
+
+body {
+  background: var(--bg-color); /* Utilisation de la couleur de fond principale pour le corps de la page */
+  color: var(--text-color); /* Utilisation de la couleur de texte principale pour tous les éléments textuels */
+}
+
+section {
+  min-height: 40vh; /* Définition de la hauteur minimale de la section à 40% de la hauteur de la vue */
+  padding: 7rem 7% 1rem; /* Définition des valeurs de rembourrage pour la section */
+}
+
+.head {
+  position: fixed; /* Positionnement fixe de l'en-tête */
+  top: 0;
+  left: 0;
+  width: 100%; /* Largeur de l'en-tête à 100% */
+  padding: 2rem 3%; /* Définition des valeurs de rembourrage pour l'en-tête */
+  background: var(--bg-color); /* Utilisation de la couleur de fond principale pour l'en-tête */
+  display: flex; /* Utilisation de l'affichage flexible pour l'en-tête */
+  justify-content: space-between; /* Alignement des éléments en-tête avec un espace uniforme entre eux */
+  align-items: center; /* Alignement des éléments en-tête sur l'axe vertical */
+  z-index: 100%; /* Définition de l'index de la pile pour l'en-tête */
+}
+
+.head .sticky {
+  border-radius: .1rem solid rgba(0,0,0,.2); /* Définition de la bordure avec un rayon de bordure de 0,1rem et une couleur RGBA semi-transparente */
+}
+
+/* Cette section met en forme le logo, définit sa taille de police et sa couleur, et définit le curseur par défaut */
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+    }
+    
+    /* Cette section met en forme un élément span spécifique */
+    span{
+    color: rgb(227, 128, 7);
+    }
+    
+    /* Cette section met en forme les liens de navigation */
+    .navb a{
+    font-size: 1.7rem;
+    color: var(--text-color) ;
+    margin-left: 2rem;
+    }
+    
+    /* Cette section met en forme les états hover et actif des liens de navigation */
+    .navb a:hover,
+    .navb a.a{
+    color: var(--min-color);
+    }
+    
+    /* Cette section met en forme l'icône de menu */
+    #menu-i{
+    font-size: 2rem;
+    color: var(--text-color);
+    display: none;
+    }
+    /* Cette section met en forme la section d'accueil, en définissant l'alignement des éléments */
+ .Acceuill{
+    display: flex;
+    align-items:center ;
+    }
+    
+    /* Cette section met en forme l'image d'accueil */
+    .accei-img img{
+    width:30vw;
+    border-radius: 5%;
+    }
+    
+    /* Cette section met en forme les titres de la section d'accueil */
+    .Acceuill-cn h3{
+    font-size: 1.2rem ;
+    font-weight: 700;
+    }
+    
+    /* Cette section met en forme le deuxième titre de la section d'accueil */
+    .Acceuill-cn h3:nth-of-type(2){
+    margin-bottom:2rem ;
+    }
+    
+    /* Cette section met en forme les éléments span de la section d'accueil */
+    span{
+    color: var(--min-color);
+    }
+    
+    /* Cette section met en forme le titre principal de la section d'accueil */
+    .Acceuill-cn span{
+    font-size: 30px;
+    }
+    
+    /* Cette section met en forme le titre principal de la section d'accueil */
+    .Acceuill-cn h1{
+    font-size: 3.6rem;
+    font-weight: 300;
+    line-height: 1.3;
+    }
+    
+    /* Cette section met en forme le paragraphe de la section d'accueil */
+    .Acceuill-cn p{
+    font-size: 20px;
+    line-height: 1.4;
+    }
+    
+    /* Cette section met en forme les liens vers les réseaux sociaux */
+    .Resauxsociaux a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border:.2rem solid var(--min-color) ;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--min-color);
+    margin: 3rem 1.5rem 3rem 0;
+    }
+    * Ce code définit le style pour les liens qui ont été survolés */
+    .Resauxsociaux a:hover{
+    background-color:var(--min-color) ;
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--min-color);
+    }
+    
+    /* Ce code définit le style pour les boutons */
+    .btn{
+    display: inline-block;
+    padding: 12px ;
+    background: var(--min-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--min-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 500;
+    transition: .5s ease;
+    }
+    
+    /* Ce code définit le style lorsque les boutons sont survolés */
+    .btn:hover{
+    box-shadow: none;
+    }
+    
+    /* Ce code définit le style pour la section "A propos" */
+    .apropo{
+    display: flex;
+    align-items: center;
+    background: var(--second-bg-color);
+    }
+    
+    /* Ce code définit le style pour l'image de la section "A propos" */
+    .abou-img img{
+    width:30vw;
+    border-radius: 20%;
+    }
+    
+    /* Ce code définit le style pour le titre de la page */
+    .heading{
+    text-align: center;
+    font-size: 3rem;
+    }
+    
+    /* Ce code définit le style pour le contenu de la section "A propos" */
+    .cont-apropo h2{
+    text-align: left;
+    line-height:1.2;
+    }
+    
+    /* Ce code définit le style pour le sous-titre de la section "A propos" */
+    .cont-apropo h3{
+    font-size: 2.6rem;
+    }
+    
+    /* Ce code définit le style pour le texte de la section "A propos" */
+    .cont-apropo p{
+    font-size: 20px;
+    margin: 2rem 0 3rem ;
+    line-height: 1.4;
+    }
+    
+    /* Ce code définit le style pour le conteneur de la section "Cartes" */
+    .cont{
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    }
+    
+    /* Ce code définit le style pour les cartes de la section "Cartes" */
+    .card{
+    position: static;
+    }
+    
+    .cont .card{
+    position: relative;
+    width: 320px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,05),inset -5px -5px 5px rgb(255, 255,255,0.5);
+    border-radius: 15px;
+    margin: 30px;
+    }
+    
+    /* Ce code définit le style pour la boîte qui contient le contenu des cartes de la section "Cartes" */
+    .cont .card .box1{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background:#fff ;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    }
+/* Styles pour l'effet de survol des cartes */
+.cont .card:hover .box1{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background: var(--min-color);
+} 
+
+/* Styles pour le titre de la carte lorsqu'elle est survolée */
+.cont .card:hover .box1 .contant h2{
+    color: #fff;
+} 
+
+/* Styles pour le contenu de la carte */
+.cont .card .box1 .contant{
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styles pour le titre de la carte */
+.cont .card .box1 .contant h1{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(0,0,0,05);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+/* Styles pour le titre de la carte lorsqu'elle est survolée */
+.cont .card:hover .box1 .contant h1{
+    color: rgba(0,0,0,05);
+}
+
+/* Styles pour le sous-titre de la carte */
+.cont .card .box1 .contant h2{
+   font-size: 2em;
+   color: #150c0c;
+   z-index: 1;
+   transition: 0.5s; 
+}
+
+/* Styles pour le paragraphe de la carte */
+.cont .card .box1 .contant p{
+    font-size: 1em;
+    font-weight: 700;
+    color: #3b3636;
+    z-index: 1;
+    transition: 0.5s;  
+}
+
+/* Styles pour la section "projets" */
+#projects {
+    padding: 50px;
+    background-color: #323946;
+    height: 20%;
+    width: 100%;
+} 
+
+/* Styles pour les projets */
+.project {
+    position: static;
+    display: inline-block;
+    margin: 2%;
+    width: 300px; /* largeur fixe */
+    height: 200px; /* hauteur fixe */
+}
+
+/* Styles pour le dernier projet */
+.project:last-child {
+    margin-right: 0;
+}
+
+/* Styles pour l'image du projet */
+.project img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Styles pour la superposition lorsqu'un projet est survolé */
+.overlay:hover {
+    opacity: 1;
+}
+
+/* Styles pour le titre de la superposition */
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Styles pour la boîte de la superposition */
+.lightbox {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+ 
+  
+  .lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .lightbox:target {
+    display: flex;
+  }
+  
+/*projet*/
+.cont .card .box1 .contant a{
+   position: relative;
+   display: inline-block;
+   padding: 8px 20px;
+   background: var(--min-color);
+   margin-top: 15px;
+   border-radius: 20px;
+   color: #fff;
+   text-decoration: none; 
+   font-weight: 400;
+   box-shadow: 0 10px 20px rgba(0,0,0,.02);
+}
+.cont .card:hover .box1 .contant a{
+    background: var(--min-color);
+}
+.contant i{
+    font-size: 7rem;
+    color: var(--min-color);
+}
+
+.service h2{
+    margin-bottom: 1;
+}
+/*style de services */
+img{
+   height: 400px;
+   width: 360px;
+   border-radius: 3px;
+
+}
+.card{
+    height: 500px;
+    margin: 20px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+}
+.intro{
+    height: 70px;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position:absolute;
+    border-bottom: 240px;
+    background: rgba(12, 11, 11, 0);
+    color: white;
+}
+.intro h1{
+    margin: 10px;
+    font-size: 40px;
+
+}
+.intro p{
+    font-size: 20px;
+    margin: 20px;
+    visibility: hidden;
+    opacity: 0;
+}
+.card:hover{
+    cursor: pointer;
+}
+.card:hover .intro{
+    height: 220px;
+    bottom: 240px;
+    background: black;
+}
+.container{
+    display: flex;
+}
+.contact{
+    min-height: auto;
+}
+.contact h2{
+    margin-bottom: 3rem;
+}
+.contact form{
+    max-width: 90rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1%;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contact form .input-box input{
+    width: 49%;
+}
+.contact form textarea{
+    resize: none;
+}
+.contact form .btn{
+    margin-top:2rem ;
+    cursor: pointer;
+
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap ;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+footer {
+    border-top: 1px solid #ccc;
+    text-align: center;
+    padding: 20px;
+ }
+ .foot-texte{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+    line-height: 1.8;
+ }
+ .foot-texte i{
+    color: var(--min-color);
+ }
+ 
+.footer-icon{
+    color: #1f242d;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.footer-icon a:hover{
+    box-shadow:0 0 1rem var(--min-color) ;
+}
+.footer-icon a i{
+    font-size: 1rem;
+    
+}
+/* Styles pour le menu */
+#menu-i {
+    cursor: pointer;
+  }
+ 
+  .bx-x {
+    color: #fff;
+    transform: rotate(45deg);
+  }
+   /*le btn de scroll*/
+  .scroll-to-top {
+    color: var(--min-color);
+    font-size: 200%;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+  }
+
+    /*le btn de scroll*/
+ 
+  /* Styles pour la barre de navigation */
+
+#apropo{
+    padding: 80px 0;
+    color: var(--min-color);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis:35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px ;
+}
+.about-col-2{
+    flex-basis:60% ;
+}
+.subt
+{
+     font-size: 60px;
+     font-weight: 600;
+     color: #fff;
+}
+.tab-t{
+    display: flex;
+    margin: 15px ;
+}
+.tab-l{
+   margin-right: 9%;
+   font-size: 18px;
+   font-weight: 500; 
+   cursor: pointer;
+   position: relative;
+}
+.tab-l::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:var(--min-color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-l.active-link::after{
+    width:50% ;
+}
+.tab-con ul li{
+    list-style: none;
+    margin: 10px;
+} 
+.tab-con ul li span{
+    color: #fff;
+    font-size: 14%;
+}
+.tab-con{
+    display: none;
+}
+.tab-con.active-tab{
+   display: block; 
+}
+/* TESTE CONTACTE */
+/* TESTE CONTACTE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media quiri*/
+@media screen and (max-width: 1024px) {
+    html {
+    font-size: 50%;
+    }
+    
+    .navb a {
+    font-size: 1.5rem;
+    }
+    
+    #menu-i {
+    display: block;
+    font-size: large;
+    }
+    
+    .navb {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    }
+    
+    .navb.show {
+    left: 0;
+    }
+    
+    .navb a {
+    font-size: 3rem;
+    margin: 2rem 0;
+    text-align: center;
+    }
+    
+    .head {
+    padding: 2rem 7%;
+    }
+    
+    .Acceuill {
+    flex-direction: column;
+    }
+    .apropo{
+        flex-direction: column; 
+    }
+    .heading{
+        display: flex;
+        
+    }
+    
+    .accei-img img {
+    width: 60vw;
+    }
+    .abou-img img{
+        width:60vw;
+    }
+    .Acceuill-cn h1 {
+    font-size: 2.5rem;
+    }
+    
+    .Resauxsociaux {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+    }
+    
+    .Resauxsociaux a {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    }
+    
+    .cont .card {
+    width: 280px;
+    height: 400px;
+    margin: 20px;
+    }
+    .cont .card .box1 .contant p{
+        font-size: 60%;
+    }
+    
+    }
+    
+    @media screen and (max-width: 768px) {
+    html {
+    font-size: 45%;
+    }
+    
+    .navb a {
+    font-size: 1.2rem;
+    }
+    
+    .navb a:hover,
+    .navb a.a {
+    font-size: 1.8rem;
+    }
+    
+    .head {
+    padding: 1.5rem 5%;
+    }
+    
+    .logo {
+    font-size: 2rem;
+    }
+    
+    .accei-img img {
+    width: 80vw;
+    }
+    .abou-img img{
+    
+            width:70vw;
+    }
+    .Acceuill-cn h1 {
+    font-size: 2rem;
+    }
+    
+    .Acceuill-cn p {
+    font-size: 1.4rem;
+    }
+    
+    .cont .card {
+    width: 240px;
+    height: 360px;
+    margin: 10px;
+    }
+    .cont .card .box1 .contant p{
+        font-size: 60%;
+    }
+    }
+    
+    @media screen and (max-width: 500px) {
+    html {
+    font-size: 40%;
+    }
+    
+    .navb a {
+    font-size: 1rem;
+    margin: 1rem 0;
+    }
+    
+    .head {
+    padding: 1rem 5%;
+    }
+    .abou-img img{
+        width:70vw;
+    }
+    
+    .logo {
+    font-size: 1.8rem;
+    }
+    
+    .navb a:hover,
+    .navb a.a {
+    font-size: 1.5rem;
+    }
+    
+    .accei-img img {
+    width: 90vw;
+    }
+    
+    .Acceuill-cn h1 {
+    font-size: 1.8rem;
+    }
+    
+    .Acceuill-cn p {
+    font-size: 20px;
+    }
+    
+    .cont .card {
+    width: 200px;
+    height: 320px;
+    margin: 10px;
+    }
+    .cont .card .box1 .contant p{
+        font-size: 15px;
+    }
+}
+    @media screen and (max-width: 1024px){
+        .Acceuill-cn p {
+            font-size: 20px;
+            }
+    #menu-i{
+        display: block;
+    }
+    .abou-img img{
+        width:70vw;
+    }
+    .navb{
+        position:absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background:var(--bg-color) ;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        display: none;
+    }
+    .navb a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .navb.active{
+        display: block;
+    }
+    .foot-texte{
+        margin-left: 20%;
+    }
+    .cont .card .box1 .contant p{
+        font-size: 15px;
+    }
+    }
+    @media screen and (max-width: 768px) {
+        .contact form .input-box input {
+          width: 100%;
+        }
+        .footer {
+          padding: 2rem 5%;
+        }
+        .foot-texte {
+          margin-left: 0;
+          margin-top: 1rem;
+        }
+          #projects {
+          padding: 20px;
+          
+        }
+      
+        .project {
+          display: block;
+          margin-left:  70px ;
+        }
+        .contant p{
+            font-size: 20%;
+        }
+        .cont .card .box1 .contant p{
+            font-size: 15px;
+        }
+        
+      }
+      @media screen and (max-width: 768px) {
+        .foot-texte {
+        margin-left: 10%;
+        text-align: center;
+        }
+        .contant p{
+            font-size: 20px;
+        }
+        }
+      
+      
+
+
+
+
+
+
+
+
+  
